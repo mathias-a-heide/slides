@@ -63,6 +63,17 @@
     line-height: 1.6;
     font-weight: 300;
   }
+  .hero-proof {
+    margin-top: 1.75rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-weight: 300;
+  }
+  .hero-proof strong {
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
   .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
   .btn-primary {
     display: inline-flex; align-items: center; gap: 0.5rem;
@@ -78,6 +89,25 @@
     background: transparent; color: var(--ink); border: 1px solid var(--border-strong); transition: border-color 0.2s;
   }
   .btn-secondary:hover { border-color: var(--ink); }
+  .cta-label-mobile { display: none; }
+  @media (max-width: 520px) {
+    .cta-row {
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+    }
+    .btn-primary,
+    .btn-secondary {
+      flex: 1 1 0;
+      justify-content: center;
+      min-width: 0;
+      padding: 0.7rem 0.75rem;
+      font-size: 0.78rem;
+      gap: 0.35rem;
+      white-space: nowrap;
+    }
+    .cta-label-desktop { display: none; }
+    .cta-label-mobile { display: inline; }
+  }
 
   /* Clone block */
   .clone-block {
@@ -417,9 +447,10 @@
     </div>
 
     <div class="cta-row">
-      <a href="https://github.com/noskillish/slides" class="btn-primary" target="_blank">View on GitHub &rarr;</a>
-      <a href="https://noskillish.github.io/slides/deck.html" class="btn-secondary" target="_blank">See the demo deck &rarr;</a>
+      <a href="https://github.com/noskillish/slides" class="btn-primary" target="_blank"><span class="cta-label-desktop">View on GitHub</span><span class="cta-label-mobile">GitHub</span> &rarr;</a>
+      <a href="https://noskillish.github.io/slides/deck.html" class="btn-secondary" target="_blank"><span class="cta-label-desktop">See the demo deck</span><span class="cta-label-mobile">Demo deck</span> &rarr;</a>
     </div>
+    <p class="hero-proof">Join <strong>4,000+ decks</strong> already built with Slides.</p>
   </div>
 </div>
 
@@ -551,7 +582,7 @@
     <div class="features">
       <div class="feature-card">
         <h4>Design system</h4>
-        <p>25+ components with consistent tokens. Colors, type, spacing. All in CSS variables. Fork and make it yours.</p>
+        <p>30+ components with consistent tokens. Colors, type, spacing. All in CSS variables. Fork and make it yours.</p>
       </div>
       <div class="feature-card">
         <h4>Claude marketplace</h4>
